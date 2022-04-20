@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex05</title>
+
+<style type="text/css">
+* {
+	margin: 0;
+}
+
+.wrap {
+	width: 1000px;
+	margin: auto;
+	background-color: gray;
+}
+
+.test {
+	display: flex; flex-flow: row; /* column은 세로 row는 가로 정렬 */
+}
+.div {width: 33.333%; height:200px;}
+.div1 {order: 3; background-color: red;}
+.div2 {order: 2; background-color: green;}
+.div3 {order: 1; background-color: aqua;}
+.div4 {width: 33.333%; background-color: aqua;}
+</style>
+
+</head>
+<body>
+	<div class="wrap">
+		<div class="test">
+			<div class="div div1">
+				<div class="div div4">1</div>
+				<div class="div div4">2</div>
+ 				<div class="div div4">3</div></div>
+			<div class="div div2">	<h1>2</h1></div>
+			<div class="div div3"><h1>3</h1></div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+@charset "EUC-KR";
+div{ background-color: blue; height: 100px;
+   overflow: hidden; }
+div div{
+background-color: red; width: 200px; height: 200px;
+}
