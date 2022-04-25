@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+var kor01=12345
+function test(){
+	document.write('test실행')
+	let kor = 95
+	kor = 90
+	kor = 111
+	document.write('test(kor01) : '+kor01)
+	return "안녕하세요"
+}
+var re = test()
+document.write('밖(kor01) : '+kor01)
+document.write('밖(re) : '+re+"<hr>")
+
+function test2(name, age, t1, t2){
+	document.write(name+age+t1+t2)
+	if(t1 == undefined){
+		alert('값없음')
+	}
+}
+function test3(){
+	for(i=0; i<arguments.length; i++){
+		document.write(arguments[i]+',')
+	}
+}
+</script>
+
+<button type="button" onclick="test2('홍',21)">클릭</button>
+<button type="button" onclick="test3(1,2,3,4,5)">클릭</button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

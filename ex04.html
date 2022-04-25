@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function test(){
+	id = document.getElementById('id')
+	id2 = document.getElementById('id2')
+	console.log(id)
+	console.log(id2)
+	id2.value = id.value
+	id.value = ""
+	lb = document.getElementById('label')
+	lb.innerHTML = "땡"
+}
+function test2(){
+	id = document.getElementById('id')
+	lb = document.getElementById('label')
+	console.log(id.value.length)
+	if(id.value.length < 6){
+		lb.innerHTML="<b style='color:red;'>길이가 짧다</b>"
+	}else{
+		lb.innerHTML="<b style='color:blue;'>존재하는 id</b>"
+	}
+}
+var num = 0
+function test3(){
+	img = document.getElementById('img')
+	if(num == 0 ){
+		img.src = 'car01.png'
+		img.style = 'width:200px; height:200px;'
+		num =1
+	}else{
+		img.src = 'add.png'
+		img.style = 'width:100px; height:100px;'
+		num =0
+	}
+}
+</script>
+</head>
+<body>
+	<img id='img' src="add.png" width="100px" height="100px"
+								onclick="test3()">
+<hr>
+	<input type="text" id="id" oninput="test2()">
+	<label id="label">워라베하고싶다</label><br>
+	
+	<input type="text" id="id2"><br>
+	<input type="button" value="btn" onclick="test()">
+</body>
+</html>
+
+
+
+
+
+
