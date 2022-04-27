@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="test.js"></script>
+</head>
+<body>
+	<script>
+		var num = 0
+		document.write('실행 : '+num)
+	</script>
+	<input type="button" onclick="test()" 
+								value="click">
+	<script type="text/javascript">
+		num = 100
+		obj = null
+		document.write(typeof num +"<br>")
+		document.write(typeof obj +"<br>")
+		document.write(typeof [1,2,3] +"<br>")
+		document.write(typeof 'test' +"<br>")
+		document.write(typeof {'key':'value'} +"<br>")
+		
+		name = prompt('당신의 이름은?')
+		age = prompt(name+'님의 나이는?')
+		addr = prompt(name+'님의 주소는?')
+		
+		document.write('<table border="1">')
+document.write('<tr> <th>이름</th><th>나이</th><th>주소</th> </tr>')
+		document.write('<tr>')
+			document.write('<td>'+name+'</td>')
+			document.write('<td>'+age+'</td>')
+			document.write('<td>'+addr+'</td>')
+		document.write('</tr>')
+		document.write('</table>')
+	</script>
+</body>
+</html>
+
+
+
+
+
+

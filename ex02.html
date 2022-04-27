@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	gender = "M"
+	if(gender == "M")
+		console.log('남성입니다')
+	else{
+		console.log('여성입니다')
+	}
+	
+	num = "111"
+	if(num === 111)
+		alert('같다')
+	for(x=2; x<=9 ; x++){
+		for(y=1; y<=9 ;y++){
+			document.write(x+"*"+y+"="+x*y+"<br>")
+		}
+	}
+	
+	var num = prompt("아파트 층 수 입력");
+	document.write("<table border='1'>");
+	for(;num>0;num--){
+		document.write("<tr>");
+		for(j=1;j<5;j++){
+			document.write("<td>"+(num*100+j)+"호</td>");
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+</script>
+</body>
+</html>
+
+
+
+
+

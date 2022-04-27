@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function init(){
+	alert('초기화')
+}
+function over(obj){
+	obj.style.color = 'red'
+}
+function out(){
+	document.getElementById('h1').style.color='black'
+}
+</script>
+</head>
+<body onload="init()">
+<h1 id="h1" onmouseover="over(this)" onmouseout="out()">
+	Mouse over this text
+</h1>
+
+
+
+
+
+
+	<div id='digClock01'></div>
+	<button type="button" onclick="test()">클릭</button>
+	<button type="button" onclick="start()">시작</button>
+	<button type="button" onclick="end()">종료</button>
+<script type="text/javascript">
+	var e
+	var cnt = 1
+	function start(){
+		var today = new Date()
+		var day = today.getMonth()+1+'월'
+					+today.getDate()+"일"
+					+today.getHours()+"시"
+					+today.getMinutes()+"분"
+					+today.getSeconds()+"초"
+		dig = document.getElementById('digClock01')
+		dig.innerHTML = day
+		//e = setTimeout('start()', 1000)
+	}
+	function test(){
+		e = setInterval(start, 1000)
+	}
+	function end(){
+		//clearTimeout(e)
+		clearInterval(e)
+	}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function register(){
+		id = document.getElementById("id")
+		pwd1 = document.getElementById("pwd1")
+		pwd2 = document.getElementById("pwd2")
+		if(id.value == ""){
+			alert('아이디는 필수 항목입니다.')
+			id.focus()
+		}else if(pwd1.value == ""){
+			alert('비밀번호는 필수 항목입니다.')
+			pwd1.focus()
+		}else if(pwd2.value == ""){
+			alert('비밀번호 확인은 필수 항목입니다.')
+			pwd2.focus()
+		}else{
+			
+			fo.submit()
+		}
+	}
+	function pwdChk(){
+		pwd1 = document.getElementById("pwd1")
+		pwd2 = document.getElementById("pwd2")
+		lbl_pwd2 = document.getElementById("lbl_pwd2")
+		if(pwd1.value != pwd2.value){
+			pwd1.value=""
+			pwd2.value=""
+			pwd1.focus()
+			str = "<b style='color:red;'>비밀번호 불일치</b>"
+		}else{
+			str = "<b style='color:blue;'>비밀번호 일치 합니다</b>"
+		}
+		lbl_pwd2.innerHTML=str
+	}
+</script>
+</head>
+<body>
+	<form id="fo" action="success.html" method="post">
+		<input type="text" id="id" placeholder="input id"><label id="lbl_id">(*필수항목)</label><br>
+		<input type="text" id="pwd1" placeholder="input password"><label id="lbl_pwd1">(*필수항목)</label><br>
+		<input type="text" id="pwd2" onchange="pwdChk()" placeholder="input password check"><label id="lbl_pwd2">(비밀번호 확인)</label><br>
+		<input type="text" placeholder="input name"><br>
+		<input type="button" onclick="register()">
+	</form>
+</body>
+</html>
+
+
+
+
+
+

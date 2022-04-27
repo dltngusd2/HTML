@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var arr = ['aaa','bbb','ccc']
+	function test(){
+		for(i=0; i<arr.length;i++){
+			document.write(arr[i]+",")
+		}
+		document.write("<hr>")
+		arr.push('ddd','eee')
+		document.write(arr)
+		
+		document.write("<hr>")
+		var re = arr.pop()
+		document.write(arr)
+		document.write("빠진값 : "+re)
+		
+		document.write("<hr>")
+		var re = arr.unshift('jjj','kkk')
+		document.write(arr)
+		
+		document.write("<hr>")
+		var re = arr.shift()
+		document.write(arr)
+		document.write("빠진값 : "+re)
+	}
+</script>
+<button type="button" onclick="test()">클릭</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

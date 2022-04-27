@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.ccc { color: red;}
+	.ddd { background-color: gray; }
+	#abc { font-style: italic; }
+</style>
+<script type="text/javascript">
+var img
+var test
+function add(){
+	test = document.getElementById('test')
+	test.className = "ccc ddd"
+	//test.id = 'abc test'
+	//test.innerHTML = "<h1>aaaa</h1>"
+	img = document.createElement('img')
+	img.src = 'add.png'
+	img.width = 100
+	img.style.height = "100px"
+	test.appendChild(img)
+}
+function remove(){
+	test.removeChild(img)
+}
+</script>
+</head>
+<body>
+
+	<h3 id="test" onclick="add()">test</h3>
+	<h3 onclick="remove()">remove</h3>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

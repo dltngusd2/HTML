@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function myFocus(){
+		pwd = document.getElementById("pw")
+		pwd.focus()
+		//window.history.forward()
+		//history.back()
+		var result = confirm("정말로 삭제?")
+		if(result){
+			alert('삭제 완료')
+		}else{
+			alert('삭제 취소')
+		}
+	}
+	function newWin(){
+		//window.open('popup.html',"_self")
+		window.open('popup.html',"",
+						"width=300, height=300")
+	}
+	function chk(){
+		id = document.getElementById("id")
+		if(id.value == ""){
+			alert('필수 항목 입니다')
+		}else{
+			fo.submit()
+		}
+	}
+	function test(){
+		location.href='ex08.html'
+	}
+</script></head><body>
+	<form id="fo" action="ex08.html">
+		<input type="text" name="n" id="id">(필수)<br>
+		<input type="button" onclick="chk()" value="로그인">
+		<br>
+		<input type="button" onclick="test()" value="로그인">
+		<a href="ex08.html">이동</a><br>
+	</form>
+<hr>
+	<input type="button" onclick="newWin()">
+<hr>
+	<input type="text"><br>
+	<input type="text" id="pw"><br>
+	<input type="button" onclick="myFocus()">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
